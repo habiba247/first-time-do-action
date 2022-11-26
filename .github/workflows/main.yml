@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: "login to dock hub"
-        run: docker login --username ${{ secrets.DOCKER_USER }} --password ${{ secrets.DOCKER_PASS }}
+        run: docker login --username ${{ secrets.DOCKER_USER }} --password ${{ secrets.DOCKER_PASSWORD }}
         
       - name: "bulding image"
         run: docker build -t ${{ secrets.DOCKER_USER }}/myimage .
